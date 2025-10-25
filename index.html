@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makindu Artifacts | Authentic Kenyan Crafts</title>
+    <!-- Tailwind CSS CDN for development convenience -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- The font import and basic styling were moved to src/App.jsx 
+         to resolve the PostCSS build error. -->
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div id="root"></div>
+    <!-- 
+      Vite entry point. This path MUST be relative to the index.html file.
+      FIX: Reverting to .jsx extension as required by Vite to parse JSX syntax,
+      while keeping the crucial relative path (./src/) for GitHub Pages deployment.
+    -->
+    <script type="module" src="./src/index.jsx"></script>
+  </body>
+</html>
