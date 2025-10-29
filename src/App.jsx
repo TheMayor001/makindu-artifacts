@@ -301,7 +301,7 @@ const App = () => {
           <div className="flex items-center space-x-2">
             <Heart className="h-7 w-7 text-indigo-600" />
             <h1 className="text-2xl font-extrabold text-indigo-900 tracking-tight">
-              M.A. Makindu Artifacts
+              M.H. Makindu Handcrafts
             </h1>
           </div>
           <div className="flex items-center space-x-4">
@@ -596,7 +596,7 @@ const App = () => {
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-8">
         <Loader className="h-10 w-10 animate-spin text-indigo-500 mb-4" />
         <p className="text-xl font-medium text-indigo-800 mb-2">
-          Connecting to Makindu Artifacts Database...
+          Connecting to Makindu Handfacts Database...
         </p>
       </div>
     );
@@ -630,7 +630,7 @@ const App = () => {
 
           <div className="mt-16">
             <h2 className="text-4xl font-extrabold text-indigo-900 mb-8">
-              Featured Artifacts
+              Featured Handcrafts
             </h2>
 
             {/* Conditional Rendering based on artifacts length */}
@@ -643,7 +643,7 @@ const App = () => {
             ) : (
               <div className="bg-white p-12 rounded-xl text-center shadow-lg border border-gray-200">
                 <p className="text-2xl font-medium text-gray-700">
-                  No artifacts found in the database yet.
+                  No Hanfacts found in the database yet.
                 </p>
                 <p className="mt-4 text-gray-500">
                   Please use the **+ Admin** button to add the first product to

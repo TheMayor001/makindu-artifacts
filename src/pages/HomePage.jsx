@@ -4,8 +4,8 @@ import React, { useEffect, useState, useMemo } from "react";
 import { collection, query, onSnapshot } from "firebase/firestore";
 import { Search } from "lucide-react"; // Import the search icon
 import { db } from "../services/firebase";
-import Header from "../components/Header";
-import ProductCard from "../components/ProductCard";
+import Header from "../components/Header.jsx";
+import ProductCard from "../components/ProductCard.js"; // CRITICAL: Ensure this is the correct file extension
 
 // Define the structure for product data
 const ARTIFACTS_COLLECTION = "artifacts";
@@ -70,10 +70,9 @@ const HomePage = () => {
     }
     const lowerCaseSearch = searchTerm.toLowerCase();
 
-    return products.filter(
-      (product) =>
-        // Filter based on product name
-        product.name && product.name.toLowerCase().includes(lowerCaseSearch)
+    return products.filter((product) =>
+      // Filter based on product name (and fallback to an empty string if product.name is undefined)
+      (product.name || "").toLowerCase().includes(lowerCaseSearch)
     );
   }, [products, searchTerm]);
 
@@ -95,7 +94,7 @@ const HomePage = () => {
       return (
         <div className="text-center py-10">
           <p className="text-xl text-gray-600 mb-4">
-            No artifacts found in the database yet.
+            No Handcrafts found in the database yet.
           </p>
           <p className="text-gray-500">
             Please add some documents to the 'artifacts/{APP_ID}
